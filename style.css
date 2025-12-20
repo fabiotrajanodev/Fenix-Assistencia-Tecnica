@@ -262,7 +262,9 @@ section {
 .trust-section {
     background-color: #f8f8f8;
     padding: 96px 24px;
-    height: 44rem;
+    /* Remover altura fixa para que a seção cresça conforme o conteúdo
+       e não invada a seção seguinte em telas pequenas. */
+    min-height: 30rem;
 }
 
 .section-title {
@@ -671,5 +673,16 @@ footer {
 
     .trust-card {
         padding: 24px;
+    }
+}
+
+/* Ajustes responsivos para evitar sobreposição em celulares */
+@media (max-width: 600px) {
+    .trust-section {
+        padding: 48px 16px;
+    }
+
+    .services-section {
+        padding: 48px 16px;
     }
 }

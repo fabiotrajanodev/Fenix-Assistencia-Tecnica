@@ -113,12 +113,40 @@ section {
     max-width: 900px;
 }
 
-.brand-header {
+/* .brand-header {
     display: flex;
     align-items: center;
     justify-content: center;
     gap: 12px;
     margin-bottom: 32px;
+} */
+
+
+.brand-header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0;
+    flex-wrap: nowrap;
+    width: 100%;
+    margin-bottom: 32px;
+    
+}
+
+.brand-header img {
+    width: 150px;
+    height: auto;
+    flex-shrink: 0;
+    margin: 0;
+}
+
+.brand-name {
+    font-size: clamp(42px, 8vw, 84px);
+    font-weight: 900;
+    color: #ffffff;
+    line-height: 1;
+    white-space: nowrap;
+    margin: 0;
 }
 
 .brand-icon {
@@ -127,12 +155,12 @@ section {
     color: #FF8C42;
 }
 
-.brand-name {
+/* .brand-name {
     font-size: 24px;
     font-weight: 700;
     color: #FF8C42;
     letter-spacing: 1px;
-}
+} */
 
 .hero h1 {
     font-size: clamp(42px, 8vw, 84px);
@@ -684,5 +712,120 @@ footer {
 
     .services-section {
         padding: 48px 16px;
+    }
+}
+/* RESPONSIVIDADE GERAL */
+@media (max-width: 768px) {
+
+    header {
+        flex-direction: column;
+        height: auto;
+        padding: 10px;
+        gap: 10px;
+    }
+
+    .log {
+        margin-left: 0;
+    }
+
+    .tel {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .tel p {
+        font-size: 14px;
+    }
+
+    button {
+        margin-right: 0;
+        width: 100%;
+        max-width: 250px;
+    }
+
+    .hero {
+        padding: 120px 20px 60px;
+        min-height: auto;
+    }
+
+    .brand-header {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .brand-header img {
+        width: 100px;
+    }
+
+    .brand-name {
+        font-size: clamp(28px, 7vw, 42px);
+        text-align: center;
+        white-space: normal;
+    }
+
+    .hero p {
+        font-size: 18px;
+    }
+
+    .cta-button {
+        width: 100%;
+        max-width: 350px;
+        justify-content: center;
+        padding: 18px;
+        font-size: 15px;
+    }
+
+    .expertise-container {
+        gap: 30px;
+    }
+
+    .expertise-item {
+        width: 120px;
+    }
+
+    .trust-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .services-list {
+        font-size: 18px;
+    }
+
+    .schedule-text {
+        font-size: 18px;
+    }
+
+    .btn-schedule {
+        width: 100%;
+        justify-content: center;
+    }
+}
+
+/* CELULARES PEQUENOS */
+@media (max-width: 480px) {
+
+    .brand-header img {
+        width: 80px;
+    }
+
+    .brand-name {
+        font-size: 28px;
+    }
+
+    .hero p {
+        font-size: 16px;
+    }
+
+    .expertise-label {
+        font-size: 14px;
+    }
+
+    .trust-card {
+        padding: 20px;
+    }
+
+    .services-title,
+    .section-title {
+        font-size: 28px;
     }
 }
